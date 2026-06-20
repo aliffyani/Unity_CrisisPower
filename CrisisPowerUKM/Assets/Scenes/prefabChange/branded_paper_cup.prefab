@@ -13,6 +13,18 @@ PrefabInstance:
       value: branded_paper_cup
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 8d8fb9bafe5019945ba9f8ef8203c38d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: 8d8fb9bafe5019945ba9f8ef8203c38d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: 8d8fb9bafe5019945ba9f8ef8203c38d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: 8d8fb9bafe5019945ba9f8ef8203c38d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -101.37265
       objectReference: {fileID: 0}
