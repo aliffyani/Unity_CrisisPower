@@ -60,7 +60,15 @@ public class TrashBin : MonoBehaviour
         if (selectedItem.type == acceptedType)
         {
             Debug.Log("CORRECT BIN!");
+
+            // 1. Tell the manager to add 1 to the score
+            //TrashManager.Instance.TrashCollected();
+
+            // 2. Remove it from your UI inventory system data
             bag.RemoveSelectedItem();
+
+            // 3. FIX: Destroy the physical object in the 3D world so it disappears!
+            Destroy(other.gameObject);
         }
         else
         {

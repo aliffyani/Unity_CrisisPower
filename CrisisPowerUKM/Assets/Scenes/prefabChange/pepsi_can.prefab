@@ -13,6 +13,18 @@ PrefabInstance:
       value: pepsi_can
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: b498df19467f2004fbfc640450fc903e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.044
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: b498df19467f2004fbfc640450fc903e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.044
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: b498df19467f2004fbfc640450fc903e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.044
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: b498df19467f2004fbfc640450fc903e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -101.37265
       objectReference: {fileID: 0}
@@ -62,6 +74,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: b498df19467f2004fbfc640450fc903e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1997356132448447683}
+    - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: b498df19467f2004fbfc640450fc903e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5637649051701671048}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: b498df19467f2004fbfc640450fc903e, type: 3}
 --- !u!1 &6274026961082124700 stripped
 GameObject:
@@ -116,3 +131,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8.937492, y: 7.598629, z: 12.125231}
   m_Center: {x: -0.14345169, y: -0.07969332, z: 6.805837}
+--- !u!114 &-5637649051701671048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6274026961082124700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3082607b5fc94c8459b28c0233ea84b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashItem
+  type: 2

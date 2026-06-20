@@ -21,12 +21,24 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: e4cb8fe3c86248745891bc46da23f508, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: e4cb8fe3c86248745891bc46da23f508, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: e4cb8fe3c86248745891bc46da23f508, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: e4cb8fe3c86248745891bc46da23f508, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 179
+      value: 718
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: e4cb8fe3c86248745891bc46da23f508, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -447
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: e4cb8fe3c86248745891bc46da23f508, type: 3}
       propertyPath: m_LocalPosition.z
@@ -69,7 +81,10 @@ PrefabInstance:
       addedObject: {fileID: 457628490113636930}
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: e4cb8fe3c86248745891bc46da23f508, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -3818233825537033602}
+      addedObject: {fileID: 4176231619248904024}
+    - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: e4cb8fe3c86248745891bc46da23f508, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8637906076146108363}
     - targetCorrespondingSourceObject: {fileID: -5156539928523430694, guid: e4cb8fe3c86248745891bc46da23f508, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8307910685948364620}
@@ -132,7 +147,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &-3818233825537033602
+--- !u!65 &4176231619248904024
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,5 +166,18 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 238.33911, y: 172.63208, z: 430.91486}
+  m_Center: {x: -1309.445, y: 606.9094, z: 19.359612}
+--- !u!114 &8637906076146108363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103182953636835996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3082607b5fc94c8459b28c0233ea84b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashItem
+  type: 2
