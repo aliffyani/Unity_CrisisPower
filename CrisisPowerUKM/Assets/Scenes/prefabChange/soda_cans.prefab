@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 6900042012309903813}
   - component: {fileID: 760424448986950518}
   - component: {fileID: 4863270322785542295}
+  - component: {fileID: 3685343533567950608}
   m_Layer: 0
   m_Name: Can
   m_TagString: Untagged
@@ -117,8 +118,8 @@ Transform:
   m_GameObject: {fileID: 1195048317512229927}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 34.183, y: 51.847, z: -39.972}
-  m_LocalScale: {x: 0.20603819, y: 0.20603819, z: 0.25166}
+  m_LocalPosition: {x: 20.211, y: 59.099, z: -28.185}
+  m_LocalScale: {x: 0.12590788, y: 0.12590788, z: 0.1537869}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4722622288470806062}
@@ -173,6 +174,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3685343533567950608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195048317512229927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3082607b5fc94c8459b28c0233ea84b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashItem
+  type: 2
 --- !u!1 &1910659590525945043
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +805,7 @@ GameObject:
   - component: {fileID: 5067266189225059844}
   - component: {fileID: 2404186119104839198}
   - component: {fileID: 839255549618662719}
+  - component: {fileID: 3487655793570772134}
   m_Layer: 0
   m_Name: Can002
   m_TagString: Untagged
@@ -807,8 +822,8 @@ Transform:
   m_GameObject: {fileID: 6912572908738021574}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710194, y: -0.002632762, z: -0.002632947, w: 0.70710194}
-  m_LocalPosition: {x: -11.856, y: 51.847, z: -26.609}
-  m_LocalScale: {x: 0.20603819, y: 0.20603819, z: 0.25166}
+  m_LocalPosition: {x: -7.9232, y: 59.099, z: -20.019}
+  m_LocalScale: {x: 0.12590788, y: 0.12590788, z: 0.1537869}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3060862113131320619}
@@ -863,6 +878,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3487655793570772134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6912572908738021574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3082607b5fc94c8459b28c0233ea84b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashItem
+  type: 2
 --- !u!1 &7037581207527182276
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,6 +902,7 @@ GameObject:
   - component: {fileID: 3163211315550043078}
   - component: {fileID: 8037834052886771208}
   - component: {fileID: 6989227817664626951}
+  - component: {fileID: 4638862771395023712}
   m_Layer: 0
   m_Name: Can001
   m_TagString: Untagged
@@ -890,8 +919,8 @@ Transform:
   m_GameObject: {fileID: 7037581207527182276}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 11.079, y: 51.847, z: 19.972}
-  m_LocalScale: {x: 0.20603819, y: 0.20603819, z: 0.25166}
+  m_LocalPosition: {x: 6.0922, y: 59.099, z: 8.4465}
+  m_LocalScale: {x: 0.12590788, y: 0.12590788, z: 0.1537869}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7805319155041565721}
@@ -946,6 +975,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 122.52855, y: 120.501495, z: 169.91902}
   m_Center: {x: -4.480716, y: -1.1062987, z: 75.99978}
+--- !u!114 &4638862771395023712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7037581207527182276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3082607b5fc94c8459b28c0233ea84b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashItem
+  type: 2
 --- !u!1 &7814606578389823071
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,6 +999,7 @@ GameObject:
   - component: {fileID: 3985540328277899663}
   - component: {fileID: 3831004862295773629}
   - component: {fileID: 8287406975423539115}
+  - component: {fileID: 453849131302945990}
   m_Layer: 0
   m_Name: Can003
   m_TagString: Untagged
@@ -973,8 +1016,8 @@ Transform:
   m_GameObject: {fileID: 7814606578389823071}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70700353, y: 0.0120852105, z: 0.012085086, w: 0.70700353}
-  m_LocalPosition: {x: -35.512, y: 51.847, z: 7.1125}
-  m_LocalScale: {x: 0.20603819, y: 0.20603819, z: 0.25166}
+  m_LocalPosition: {x: -22.379, y: 59.099, z: 0.58818}
+  m_LocalScale: {x: 0.12590788, y: 0.12590788, z: 0.1537869}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6082593741570634355}
@@ -1029,6 +1072,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 128.6109, y: 118.80131, z: 158.85635}
   m_Center: {x: 2.940591, y: 10.019447, z: 66.6309}
+--- !u!114 &453849131302945990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7814606578389823071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3082607b5fc94c8459b28c0233ea84b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashItem
+  type: 2
 --- !u!1 &7907353739596708595
 GameObject:
   m_ObjectHideFlags: 0
