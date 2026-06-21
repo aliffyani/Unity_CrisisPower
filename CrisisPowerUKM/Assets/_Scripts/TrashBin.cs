@@ -135,6 +135,43 @@
 //    }
 //}
 
+//using UnityEngine;
+
+//public class TrashBin : MonoBehaviour
+//{
+//    public TrashType acceptedType;
+
+//    private void OnTriggerEnter(Collider other)
+//    {
+//        TrashItem item = other.GetComponent<TrashItem>();
+//        if (item == null) return;
+
+//        Debug.Log("[TrashBin] " + other.name + " (type=" + item.type + ") entered " + acceptedType + " bin");
+
+//        if (item.type == acceptedType)
+//        {
+//            // Correct bin — count it and remove from scene
+//            TrashManager.Instance.TrySortTrash(acceptedType, item.type);
+//            Destroy(item.gameObject);
+//        }
+//        else
+//        {
+//            // Wrong bin — penalise and show feedback but DO NOT destroy
+//            // The item stays in the world so the player can try again
+//            TrashManager.Instance.TrySortTrash(acceptedType, item.type);
+
+//            // Push the item back out so it doesn't clip inside the bin
+//            Rigidbody rb = item.GetComponent<Rigidbody>();
+//            if (rb != null)
+//            {
+//                Vector3 pushOut = (item.transform.position - transform.position).normalized;
+//                rb.linearVelocity = Vector3.zero;
+//                rb.AddForce(pushOut * 2f, ForceMode.Impulse);
+//            }
+//        }
+//    }
+//}
+
 using UnityEngine;
 
 public class TrashBin : MonoBehaviour
@@ -148,19 +185,21 @@ public class TrashBin : MonoBehaviour
 
         Debug.Log("[TrashBin] " + other.name + " (type=" + item.type + ") entered " + acceptedType + " bin");
 
+        // Score + feedback via TrashManager
+        TrashManager.Instance.TrySortTrash(acceptedType, item.type);
+
+        // Tell the bag to remove this item from its list
+        TrashBag bag = FindFirstObjectByType<TrashBag>();
+        //if (bag != null) bag.RemoveItemAfterBinSort(item);
+
         if (item.type == acceptedType)
         {
-            // Correct bin — count it and remove from scene
-            TrashManager.Instance.TrySortTrash(acceptedType, item.type);
+            // Correct — destroy it
             Destroy(item.gameObject);
         }
         else
         {
-            // Wrong bin — penalise and show feedback but DO NOT destroy
-            // The item stays in the world so the player can try again
-            TrashManager.Instance.TrySortTrash(acceptedType, item.type);
-
-            // Push the item back out so it doesn't clip inside the bin
+            // Wrong — bounce it back out so player can try again
             Rigidbody rb = item.GetComponent<Rigidbody>();
             if (rb != null)
             {
