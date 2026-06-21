@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/aliff_Stage3.unity
     guid: 206ed1d379449b6489ad46258b177197
+  - enabled: 1
+    path: Assets/Scenes/stage1_last.unity
+    guid: 4365fb6e5f09d814d8f2c6ecd39f60a0
+  - enabled: 1
+    path: Assets/Scenes/stage2_last.unity
+    guid: 923c14cd526a28245a177c52a871cac5
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6a3790e32bb3e5246a92b5da22f157ce, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
