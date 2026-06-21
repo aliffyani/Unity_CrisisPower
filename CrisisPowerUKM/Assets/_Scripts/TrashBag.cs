@@ -1,6 +1,3 @@
-
-
-
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -14,7 +11,7 @@ public class TrashBag : MonoBehaviour
     public Transform holdPoint;
     private TrashItem heldItem;
 
-
+    [Header("UI Arrays")]
     public Button[] itemButtons;
     public TextMeshProUGUI[] buttonTexts;
 
@@ -105,16 +102,23 @@ public class TrashBag : MonoBehaviour
 
     void UpdateUI()
     {
+        // Safety check 1: Exit early if arrays are not assigned at all in the inspector
+        if (itemButtons == null || buttonTexts == null) return;
+
         for (int i = 0; i < itemButtons.Length; i++)
         {
+            // Safety check 2: Avoid out-of-bounds errors if buttonTexts array is shorter than itemButtons
+            if (i >= buttonTexts.Length) break;
+
             if (i < items.Count)
             {
-                itemButtons[i].gameObject.SetActive(true);
-                buttonTexts[i].text = items[i].type.ToString();
+                // Safety check 3: Make sure individual elements aren't empty (None)
+                if (itemButtons[i] != null) itemButtons[i].gameObject.SetActive(true);
+                if (buttonTexts[i] != null) buttonTexts[i].text = items[i].type.ToString();
             }
             else
             {
-                itemButtons[i].gameObject.SetActive(false);
+                if (itemButtons[i] != null) itemButtons[i].gameObject.SetActive(false);
             }
         }
     }
