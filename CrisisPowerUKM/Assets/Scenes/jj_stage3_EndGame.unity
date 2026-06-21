@@ -11166,7 +11166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrashBag
   items: []
   capacity: 20
-  handHoldPoint: {fileID: 0}
+  holdPoint: {fileID: 0}
   itemButtons:
   - {fileID: 0}
   - {fileID: 0}
@@ -11178,6 +11178,8 @@ MonoBehaviour:
   collectSound: {fileID: 0}
   collectParticle: {fileID: 0}
   bagVisual: {fileID: 0}
+  interactionManager: {fileID: 0}
+  handInteractor: {fileID: 0}
 --- !u!65 &1158641542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15364,7 +15366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrashBag
   items: []
   capacity: 20
-  handHoldPoint: {fileID: 0}
+  holdPoint: {fileID: 0}
   itemButtons:
   - {fileID: 0}
   - {fileID: 0}
@@ -15376,6 +15378,8 @@ MonoBehaviour:
   collectSound: {fileID: 65997321}
   collectParticle: {fileID: 3309654761164961053, guid: d0c6112e94bed2c40ae3e9e18fe14191, type: 3}
   bagVisual: {fileID: 0}
+  interactionManager: {fileID: 0}
+  handInteractor: {fileID: 0}
 --- !u!4 &2113256825
 Transform:
   m_ObjectHideFlags: 0

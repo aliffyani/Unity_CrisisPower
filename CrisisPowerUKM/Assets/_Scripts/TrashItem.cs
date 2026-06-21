@@ -21,8 +21,8 @@ public enum TrashType
 //public enum TrashType
 //{
 //    Paper,    // → Blue Bin
-//    Glass,    // → Brown Bin
-//    Plastic   // → Orange Bin (includes metals)
+//    Glass,    // → Yellow Bin
+//    Plastic   // → Green Bin (includes metals)
 //}
 //using UnityEngine;
 
