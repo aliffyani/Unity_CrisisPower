@@ -1,65 +1,80 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class DoorScript : MonoBehaviour
 {
     public Renderer doorRenderer;
-    public string nextSceneName = "Stage2";
+    public string nextSceneName = "aliff_Stage2";
 
     [Header("Door Type Settings")]
     public bool isAlwaysUnlocked = false;
 
     [Header("Spawn Settings")]
-    [Tooltip("Check this true ONLY for the door inside Stage 2 to reposition the player on arrival.")]
+    [Tooltip("Check this TRUE for the door in the scene you are ENTERING so it moves the local player.")]
     public bool alihkanPemainPadaMula = false;
+
+    [Tooltip("Type the exact name of the SpawnPoint GameObject located in THIS scene.")]
+    public string spawnPointName = "SpawnPoint_DariStage1";
 
     private bool unlocked = false;
 
     void Start()
     {
-        // Automatically teleports the player if this door is flagged as the arrival door
-        if (alihkanPemainPadaMula)
-        {
-            AlihkanPemainKeSpawnPoint();
-        }
-
+        // Setup initial door colors
         if (isAlwaysUnlocked)
         {
             unlocked = true;
-            if (doorRenderer != null)
-            {
-                doorRenderer.material.color = Color.white;
-            }
+            if (doorRenderer != null) doorRenderer.material.color = Color.white;
         }
         else
         {
-            if (doorRenderer != null)
-            {
-                doorRenderer.material.color = Color.red;
-            }
+            if (doorRenderer != null) doorRenderer.material.color = Color.red;
         }
+
+        // Wait a small moment for XR Rig simulation configurations to settle before moving
+        if (alihkanPemainPadaMula)
+        {
+            StartCoroutine(WaitAndMovePlayer());
+        }
+    }
+
+    IEnumerator WaitAndMovePlayer()
+    {
+        yield return new WaitForSeconds(0.1f);
+        AlihkanPemainKeSpawnPoint();
     }
 
     void AlihkanPemainKeSpawnPoint()
     {
-        // Finds your marker object in Stage 2
-        GameObject spawnPoint = GameObject.Find("SpawnPoint_DariStage1");
-
-        // Finds your VR Rig. (Checks for the tag 'Player' first, then falls back to Unity XR name defaults)
+        // Finds the specific spawn point configured for THIS scene
+        GameObject spawnPoint = GameObject.Find(spawnPointName);
         GameObject player = GameObject.FindWithTag("Player");
         if (player == null) player = GameObject.Find("XR Origin (VR)");
         if (player == null) player = GameObject.Find("XR Origin (XR Rig)");
 
         if (spawnPoint != null && player != null)
         {
-            // Move player to the designated spot
+            CharacterController cc = player.GetComponentInChildren<CharacterController>();
+            if (cc != null) cc.enabled = false;
+
+            // 1. Move the root player object
             player.transform.position = spawnPoint.transform.position;
             player.transform.rotation = spawnPoint.transform.rotation;
-            Debug.Log("Pemain berjaya di-spawn di hadapan pintu baru!");
+
+            // 2. XR Simulator Tracking Fix
+            Transform cameraOffset = player.transform.Find("Camera Offset");
+            if (cameraOffset != null)
+            {
+                cameraOffset.localPosition = Vector3.zero;
+            }
+
+            if (cc != null) cc.enabled = true;
+            Debug.Log("Successfully moved player to spawn point: " + spawnPointName);
         }
         else
         {
-            if (spawnPoint == null) Debug.LogWarning("Missing 'SpawnPoint_DariStage1' object in scene!");
+            if (spawnPoint == null) Debug.LogWarning("Could not find Spawn Point GameObject named: " + spawnPointName);
             if (player == null) Debug.LogWarning("Could not find XR Origin player object!");
         }
     }
@@ -71,10 +86,7 @@ public class DoorScript : MonoBehaviour
         if (!unlocked && TrashManager.Instance != null && TrashManager.Instance.AllTrashCollected())
         {
             unlocked = true;
-            if (doorRenderer != null)
-            {
-                doorRenderer.material.color = Color.white;
-            }
+            if (doorRenderer != null) doorRenderer.material.color = Color.white;
         }
     }
 
