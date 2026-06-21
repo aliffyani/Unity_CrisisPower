@@ -1105,7 +1105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashBin
   acceptedType: 2
-  bag: {fileID: 1146133765}
 --- !u!1 &400323862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,7 +1408,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashBin
   acceptedType: 0
-  bag: {fileID: 1146133765}
 --- !u!1 &549752914
 GameObject:
   m_ObjectHideFlags: 0
@@ -2958,6 +2956,8 @@ MonoBehaviour:
   collectSound: {fileID: 430541816}
   collectParticle: {fileID: 3309654761164961053, guid: d0c6112e94bed2c40ae3e9e18fe14191, type: 3}
   bagVisual: {fileID: 0}
+  interactionManager: {fileID: 400323863}
+  handInteractor: {fileID: 1288608896595579733}
 --- !u!1 &1190337406
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,7 +3265,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashBin
   acceptedType: 1
-  bag: {fileID: 1146133765}
 --- !u!1 &1286379189
 GameObject:
   m_ObjectHideFlags: 0
