@@ -114,8 +114,15 @@ public class DoorScript : MonoBehaviour
     [Header("Spawn Settings")]
     [Tooltip("Check TRUE for the door in the scene you are ENTERING so it moves the local player.")]
     public bool alihkanPemainPadaMula = false;
-    [Tooltip("Exact name of the SpawnPoint GameObject in THIS scene.")]
-    public string spawnPointName = "SpawnPoint_DariStage1";
+
+    [Tooltip("Exact name of the SpawnPoint GameObject in THIS scene if returning from another stage.")]
+    public string spawnPointName = "SpawnPoint_DariStage2";
+
+    [Tooltip("Exact name of the SpawnPoint used ONLY when starting fresh from MainMenu.")]
+    public string mainMenuSpawnPointName = "SpawnPoint_MulaGame";
+
+    // Menyimpan rekod nama scene sebelum ini secara global
+    public static string previousSceneName = "";
 
     private bool unlocked = false;
 
@@ -143,7 +150,21 @@ public class DoorScript : MonoBehaviour
 
     void AlihkanPemainKeSpawnPoint()
     {
-        GameObject spawnPoint = GameObject.Find(spawnPointName);
+        // LOGIK DINAMIK: Jika datang dari MainMenu (atau nama scene sebelum ini kosong),
+        // gunakan Main Menu Spawn Point. Jika tidak, gunakan spawn point biasa (Dari Stage 2).
+        string targetSpawnName = spawnPointName;
+
+        if (string.IsNullOrEmpty(previousSceneName) || previousSceneName == "MainMenu1")
+        {
+            targetSpawnName = mainMenuSpawnPointName;
+            Debug.Log("[DoorScript] Pemain dikesan datang dari MainMenu. Menggunakan: " + targetSpawnName);
+        }
+        else
+        {
+            Debug.Log("[DoorScript] Pemain datang dari scene: " + previousSceneName + ". Menggunakan: " + targetSpawnName);
+        }
+
+        GameObject spawnPoint = GameObject.Find(targetSpawnName);
         GameObject player = GameObject.FindWithTag("Player");
         if (player == null) player = GameObject.Find("XR Origin (VR)");
         if (player == null) player = GameObject.Find("XR Origin (XR Rig)");
@@ -160,11 +181,11 @@ public class DoorScript : MonoBehaviour
             if (cameraOffset != null) cameraOffset.localPosition = Vector3.zero;
 
             if (cc != null) cc.enabled = true;
-            Debug.Log("Moved player to: " + spawnPointName);
+            Debug.Log("Moved player to: " + targetSpawnName);
         }
         else
         {
-            if (spawnPoint == null) Debug.LogWarning("Cannot find SpawnPoint: " + spawnPointName);
+            if (spawnPoint == null) Debug.LogWarning("Cannot find SpawnPoint: " + targetSpawnName);
             if (player == null) Debug.LogWarning("Cannot find player object!");
         }
     }
@@ -173,11 +194,10 @@ public class DoorScript : MonoBehaviour
     {
         if (isAlwaysUnlocked) return;
 
-        // Unlock door as soon as all trash is collected
         if (!unlocked && TrashManager.Instance != null && TrashManager.Instance.AllTrashCollected())
         {
             unlocked = true;
-            if (doorRenderer != null) doorRenderer.material.color = Color.green; // green = open
+            if (doorRenderer != null) doorRenderer.material.color = Color.green;
             Debug.Log("[DoorScript] Door unlocked!");
         }
     }
@@ -190,10 +210,12 @@ public class DoorScript : MonoBehaviour
             return;
         }
 
-        // Tell StageManager the stage is done before loading next scene
+        // SIMPAN NAMA SCENE SEMASA SEBELUM BERPINDAH
+        previousSceneName = SceneManager.GetActiveScene().name;
+
         if (StageManager.Instance != null)
             StageManager.Instance.CompleteCurrentStage(nextSceneName);
         else
-            SceneManager.LoadScene(nextSceneName); // fallback if no StageManager
+            SceneManager.LoadScene(nextSceneName);
     }
 }

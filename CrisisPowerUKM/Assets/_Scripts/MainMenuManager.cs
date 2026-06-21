@@ -6,7 +6,7 @@ public class MainMenuManager : MonoBehaviour
     public void PlayGame()
     {
         Debug.Log("Loading Level 1...");
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("aliff_Stage1");
     }
 
     public void QuitGame()
