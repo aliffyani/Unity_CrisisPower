@@ -12,6 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/aliff_Stage2.unity
     guid: 3ca0e5c67c1e2144bb6803fc2fe21819
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6a3790e32bb3e5246a92b5da22f157ce, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 32d6e85fd0995674181f542f7e74bf60, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: be6bd76f5af0c1d479f58e45cc034969, type: 2}
