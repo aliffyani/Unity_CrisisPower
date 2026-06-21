@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StageManager
   stageSelectScene: StageSelect
   stage1Scene: aliff_stage1
-  stage2Scene: aliff_Stage2
+  stage2Scene: stage2_last
   stage3Scene: aliff_Stage3
 --- !u!4 &398856643
 Transform:
@@ -2398,7 +2398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84cc1b31a932a954186124b81f4fa767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashManager
-  totalTrash: 3
+  totalTrash: 1
   collectedTrash: 0
   trashCountText: {fileID: 201660088}
   timerText: {fileID: 140917906}
@@ -6047,9 +6047,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b13038ddecf99484ea09033326014d5e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DoorScript
-  doorRenderer: {fileID: 0}
-  nextSceneName: aliff_Stage2
+  m_EditorClassIdentifier: Assembly-CSharp::DoorController
+  doorRenderer: {fileID: 1944895620}
+  nextSceneName: stage2_last
   isAlwaysUnlocked: 0
   alihkanPemainPadaMula: 1
   spawnPointName: SpawnPoint_DariStage2
@@ -8085,10 +8085,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   doorRenderer: {fileID: 1944895620}
-  nextSceneName: aliff_Stage3
+  nextSceneName: stage2_last
   isAlwaysUnlocked: 0
-  alihkanPemainPadaMula: 0
-  spawnPointName: 
+  alihkanPemainPadaMula: 1
+  spawnPointName: SpawnPoint_DariStage2
 --- !u!114 &1944895618
 MonoBehaviour:
   m_ObjectHideFlags: 0
