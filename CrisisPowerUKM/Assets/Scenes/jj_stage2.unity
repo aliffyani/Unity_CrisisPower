@@ -252,6 +252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: broken_glass_bottle_weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 6103182953636835996, guid: 4a6e1f18192238b43b67406271464fda, type: 3}
+      propertyPath: m_TagString
+      value: Trash
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -807,6 +811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: plastic_Container
       objectReference: {fileID: 0}
+    - target: {fileID: 3132493616937900433, guid: 9bfec09489c596144b349aabffc0c826, type: 3}
+      propertyPath: m_TagString
+      value: Trash
+      objectReference: {fileID: 0}
     - target: {fileID: 3374073275140838362, guid: 9bfec09489c596144b349aabffc0c826, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.2669573
@@ -1069,6 +1077,10 @@ PrefabInstance:
     - target: {fileID: 5509850444041896328, guid: 71933161b20e295428953dfa7da2deb7, type: 3}
       propertyPath: m_Name
       value: club_soda_can
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509850444041896328, guid: 71933161b20e295428953dfa7da2deb7, type: 3}
+      propertyPath: m_TagString
+      value: Trash
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1796,6 +1808,10 @@ PrefabInstance:
     - target: {fileID: 837793629936753321, guid: 87d5bea67c2ce714abbb9e9de754da81, type: 3}
       propertyPath: m_Name
       value: paper_unfold
+      objectReference: {fileID: 0}
+    - target: {fileID: 837793629936753321, guid: 87d5bea67c2ce714abbb9e9de754da81, type: 3}
+      propertyPath: m_TagString
+      value: Trash
       objectReference: {fileID: 0}
     - target: {fileID: 1012104041466728674, guid: 87d5bea67c2ce714abbb9e9de754da81, type: 3}
       propertyPath: m_LocalScale.x
@@ -2675,6 +2691,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 84.679
       objectReference: {fileID: 0}
+    - target: {fileID: 7814606578389823071, guid: f20798ddf1fa9b84da6f65ee82bd6ac8, type: 3}
+      propertyPath: m_TagString
+      value: Trash
+      objectReference: {fileID: 0}
     - target: {fileID: 7907353739596708595, guid: f20798ddf1fa9b84da6f65ee82bd6ac8, type: 3}
       propertyPath: m_Name
       value: soda_cans
@@ -3447,6 +3467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dirty_crumpled_pieces_of_paper_-_6_piece_set
       objectReference: {fileID: 0}
+    - target: {fileID: 837793629936753321, guid: 87d5bea67c2ce714abbb9e9de754da81, type: 3}
+      propertyPath: m_TagString
+      value: Trash
+      objectReference: {fileID: 0}
     - target: {fileID: 1012104041466728674, guid: 87d5bea67c2ce714abbb9e9de754da81, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.9460462
@@ -3522,6 +3546,10 @@ PrefabInstance:
     - target: {fileID: 2910385086736556436, guid: 87d5bea67c2ce714abbb9e9de754da81, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.4316
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322790890875276918, guid: 87d5bea67c2ce714abbb9e9de754da81, type: 3}
+      propertyPath: m_TagString
+      value: Trash
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
