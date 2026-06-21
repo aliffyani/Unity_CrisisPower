@@ -2719,12 +2719,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrashManager
   totalTrash: 2
   collectedTrash: 0
-  trashCountText: {fileID: 289272896}
+  trashCountText: {fileID: 0}
   timerText: {fileID: 837776763}
-  scoreText: {fileID: 1492809669}
-  accuracyText: {fileID: 1525860895}
-  wrongBinPanel: {fileID: 1524880920}
-  wrongBinText: {fileID: 142914939}
+  scoreText: {fileID: 0}
+  accuracyText: {fileID: 0}
+  wrongBinPanel: {fileID: 0}
+  wrongBinText: {fileID: 0}
   timeRemaining: 120
   pointsPerCorrect: 100
   pointsPerWrong: 50
