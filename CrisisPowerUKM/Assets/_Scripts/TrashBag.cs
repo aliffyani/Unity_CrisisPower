@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
-// Namespace wajib untuk XR Interaction Toolkit Unity 6
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -28,20 +26,22 @@ public class TrashBag : MonoBehaviour
 
     [Header("XR Settings (Sistem Paksa Pegang)")]
     public XRInteractionManager interactionManager;
-    public XRBaseInteractor handInteractor; // Boleh terima mana-mana jenis interactor tangan
+    public XRBaseInteractor handInteractor;
 
     private int selectedIndex = -1;
     private Vector3 originalScale;
 
     void Start()
     {
-        UpdateUI();
         if (bagVisual != null) originalScale = bagVisual.localScale;
 
         if (interactionManager == null)
         {
             interactionManager = FindFirstObjectByType<XRInteractionManager>();
         }
+
+        // Panggil UpdateUI selepas semua tetapan awal selesai
+        UpdateUI();
     }
 
     void OnTriggerEnter(Collider other)
@@ -74,15 +74,9 @@ public class TrashBag : MonoBehaviour
         items.Add(item);
         item.gameObject.SetActive(false);
 
-        if (TrashManager.Instance != null)
-        {
-            TrashManager.Instance.TrashCollected();
-        }
-
         UpdateUI();
     }
 
-    // === DIUBAH: Menggunakan SelectEnter mengikut permintaan Unity 6 ===
     public void SelectItem(int index)
     {
         if (index < 0 || index >= items.Count) return;
@@ -90,7 +84,6 @@ public class TrashBag : MonoBehaviour
         selectedIndex = index;
         TrashItem itemToOutput = items[index];
 
-        // 1. Aktifkan semula objek sampah
         itemToOutput.gameObject.SetActive(true);
 
         if (handInteractor != null)
@@ -102,11 +95,9 @@ public class TrashBag : MonoBehaviour
             itemToOutput.transform.position = holdPoint.position;
         }
 
-        // 2. Trik Unity 6: Guna SelectEnter dengan cara penukaran (Casting) Interface yang betul
         XRGrabInteractable grabableTrash = itemToOutput.GetComponent<XRGrabInteractable>();
         if (grabableTrash != null && handInteractor != null && interactionManager != null)
         {
-            // Unity 6 memerlukan penukaran jenis ke IXRSelectInteractor & IXRSelectInteractable
             IXRSelectInteractor interactorRef = handInteractor.GetComponent<IXRSelectInteractor>();
             IXRSelectInteractable interactableRef = grabableTrash.GetComponent<IXRSelectInteractable>();
 
@@ -116,7 +107,6 @@ public class TrashBag : MonoBehaviour
             }
         }
 
-        // 3. Keluarkan dari data list beg
         items.RemoveAt(index);
         selectedIndex = -1;
         UpdateUI();
@@ -150,12 +140,26 @@ public class TrashBag : MonoBehaviour
 
     void UpdateUI()
     {
+        // KAWALAN KESELAMATAN: Keluar awal jika array UI belum diisi langsung di Inspector
+        if (itemButtons == null || buttonTexts == null) return;
+
         for (int i = 0; i < itemButtons.Length; i++)
         {
+            // Pastikan indeks i tidak melebihi saiz array teks bagi mengelakkan ralat out-of-bounds
+            if (i >= buttonTexts.Length) break;
+
+            // Jika slot butang ini kosong (None), langgar ke butang seterusnya
+            if (itemButtons[i] == null) continue;
+
             if (i < items.Count)
             {
                 itemButtons[i].gameObject.SetActive(true);
-                buttonTexts[i].text = items[i].type.ToString();
+
+                // Pastikan komponen teks juga tidak kosong sebelum menukar teksnya
+                if (buttonTexts[i] != null)
+                {
+                    buttonTexts[i].text = items[i].type.ToString();
+                }
             }
             else
             {
