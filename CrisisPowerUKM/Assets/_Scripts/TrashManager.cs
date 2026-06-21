@@ -349,6 +349,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class TrashManager : MonoBehaviour
 {
@@ -548,4 +549,9 @@ public class TrashManager : MonoBehaviour
     public bool AllTrashCollected() => collectedTrash >= totalTrash;
     public int GetScore() => currentScore;
     public float GetAccuracy() => totalAttempts == 0 ? 100f : (correctSorts / (float)totalAttempts) * 100f;
+
+    internal void TrashCollected()
+    {
+        throw new NotImplementedException();
+    }
 }
