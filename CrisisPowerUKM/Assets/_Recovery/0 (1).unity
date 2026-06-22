@@ -3340,9 +3340,9 @@ MonoBehaviour:
   m_BlockInteractionsWithScreenSpaceUI: 0
   m_BlockUIOnInteractableSelection: 1
   m_ManipulateAttachTransform: 1
-  m_UseForceGrab: 1
+  m_UseForceGrab: 0
   m_RotateSpeed: 180
-  m_TranslateSpeed: 2
+  m_TranslateSpeed: 0
   m_RotateReferenceFrame: {fileID: 0}
   m_RotateMode: 1
   m_UIHoverEntered:
@@ -3781,7 +3781,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 49.94377, y: 11.3995495, z: 23.409315}
   m_Center: {x: 191.11661, y: 5.8002315, z: 61.164024}
@@ -5727,7 +5727,7 @@ Transform:
   m_GameObject: {fileID: 1319246707}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.49, y: -2, z: 1}
+  m_LocalPosition: {x: 2.5, y: 0, z: 2.5}
   m_LocalScale: {x: 1.3757056, y: 1.3757056, z: 1.3757056}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5785,7 +5785,7 @@ Transform:
   m_GameObject: {fileID: 1372636837}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 214.10625, y: 14.6, z: 20.69257}
+  m_LocalPosition: {x: 214.10625, y: 14.62022, z: 20.69257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7416,7 +7416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3374073275140838362, guid: 9bfec09489c596144b349aabffc0c826, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.088
+      value: 11.97
       objectReference: {fileID: 0}
     - target: {fileID: 3374073275140838362, guid: 9bfec09489c596144b349aabffc0c826, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7874,7 +7874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 400323863}
+  m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
     m_Bits: 1
   m_Handedness: 2
@@ -8028,7 +8028,7 @@ MonoBehaviour:
   m_BlockInteractionsWithScreenSpaceUI: 0
   m_BlockUIOnInteractableSelection: 1
   m_ManipulateAttachTransform: 1
-  m_UseForceGrab: 1
+  m_UseForceGrab: 0
   m_RotateSpeed: 180
   m_TranslateSpeed: 0
   m_RotateReferenceFrame: {fileID: 0}
@@ -44801,6 +44801,7 @@ GameObject:
   - component: {fileID: 4360223992450693794}
   - component: {fileID: 3672125149509483304}
   - component: {fileID: 4835414606994350560}
+  - component: {fileID: 7093428913201989398}
   m_Layer: 0
   m_Name: Mesh109_Color_L04_0
   m_TagString: Untagged
@@ -44808,6 +44809,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7093428913201989398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7093428913201989397}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8153.9995, y: 2500.0007, z: 6000.002}
+  m_Center: {x: -4076.9998, y: 1250.0001, z: -3000.0005}
 --- !u!1 &7096239843541587694
 GameObject:
   m_ObjectHideFlags: 0
