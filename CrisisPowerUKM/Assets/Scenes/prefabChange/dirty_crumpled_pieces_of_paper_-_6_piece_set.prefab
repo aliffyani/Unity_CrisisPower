@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 1273551812719284587}
   - component: {fileID: 5650896630154413472}
   - component: {fileID: 822253528277324946}
+  - component: {fileID: 7052092843034398883}
   m_Layer: 0
   m_Name: Paper_06_GEO_Paper6x_0
   m_TagString: Untagged
@@ -158,6 +159,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7052092843034398883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2553222786873785997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
 --- !u!1 &3322790890875276918
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +282,7 @@ GameObject:
   - component: {fileID: 7414827859728935232}
   - component: {fileID: 8483704186490605094}
   - component: {fileID: 1691937472453609572}
+  - component: {fileID: 4464109559313770082}
   m_Layer: 0
   m_Name: Paper_01_GEO_Paper6x_0
   m_TagString: Untagged
@@ -344,6 +362,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4464109559313770082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3495702018585740022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
 --- !u!1 &3629434403695607932
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +485,7 @@ GameObject:
   - component: {fileID: 6573545413599063999}
   - component: {fileID: 2772312702579345822}
   - component: {fileID: 2571824094829508286}
+  - component: {fileID: 6643201917222982661}
   m_Layer: 0
   m_Name: Paper_04_GEO_Paper6x_0
   m_TagString: Untagged
@@ -530,6 +565,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6643201917222982661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3647704283914915311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
 --- !u!1 &4147388347992169060
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +913,7 @@ GameObject:
   - component: {fileID: 8773860814117157859}
   - component: {fileID: 5878959722524648073}
   - component: {fileID: 4855265627850823835}
+  - component: {fileID: 5316304386277524838}
   m_Layer: 0
   m_Name: Paper_03_GEO_Paper6x_0
   m_TagString: Untagged
@@ -941,6 +993,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5316304386277524838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755973544359939664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
 --- !u!1 &7252611369508107644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1116,7 @@ GameObject:
   - component: {fileID: 1371367508881038115}
   - component: {fileID: 8155316157718609402}
   - component: {fileID: 4943327848310799014}
+  - component: {fileID: 9081763605923286313}
   m_Layer: 0
   m_Name: Paper_05_GEO_Paper6x_0
   m_TagString: Untagged
@@ -1127,6 +1196,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9081763605923286313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7890367390924987906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
 --- !u!1 &8385057571845305923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,6 +1223,7 @@ GameObject:
   - component: {fileID: 6752355249308893261}
   - component: {fileID: 7583126965242910001}
   - component: {fileID: 3514297861341061175}
+  - component: {fileID: 3456451171443217742}
   m_Layer: 0
   m_Name: Paper_02_GEO_Paper6x_0
   m_TagString: Untagged
@@ -1217,3 +1303,19 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3456451171443217742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8385057571845305923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1

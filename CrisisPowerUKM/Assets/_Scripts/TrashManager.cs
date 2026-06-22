@@ -1,4 +1,225 @@
-﻿using System.Collections;
+﻿//using System.Collections;
+//using UnityEngine;
+//using TMPro;
+//using System;
+
+//public class TrashManager : MonoBehaviour
+//{
+//    public static TrashManager Instance;
+
+//    [Header("Trash Settings")]
+//    public int totalTrash = 2;
+//    public int collectedTrash = 0;
+
+//    [Header("UI References")]
+//    public TextMeshProUGUI trashCountText;
+//    public TextMeshProUGUI timerText;
+//    public TextMeshProUGUI scoreText;
+//    public TextMeshProUGUI accuracyText;
+//    public GameObject wrongBinPanel;
+//    public TextMeshProUGUI wrongBinText;
+
+//    [Header("Win Effects")]
+//    [Tooltip("Drag your Fireworks Particle System here")]
+//    public ParticleSystem fireworksEffect;
+
+//    [Tooltip("Drag your Audio Source here")]
+//    public AudioSource celebrationAudio;
+
+//    [Header("Timer Settings")]
+//    public float timeRemaining = 120f;
+//    private bool isTimerRunning = true;
+
+//    [Header("Score Settings")]
+//    public int pointsPerCorrect = 100;
+//    public int pointsPerWrong = 50;
+//    public float wrongBinDisplayDuration = 2f;
+
+//    [Header("Stage 3 Custom Settings")]
+//    public Renderer cubeRenderer;
+
+//    private int currentScore = 0;
+//    private int totalAttempts = 0;
+//    private int correctSorts = 0;
+//    private Coroutine wrongBinCoroutine;
+
+//    private void Awake()
+//    {
+//        if (Instance == null)
+//            Instance = this;
+//        else
+//            Destroy(gameObject);
+//    }
+
+//    private void Start()
+//    {
+//        if (cubeRenderer != null)
+//            cubeRenderer.material.color = Color.red;
+
+//        if (wrongBinPanel != null)
+//            wrongBinPanel.SetActive(false);
+
+//        UpdateTrashUI();
+//        UpdateScoreUI();
+//        UpdateAccuracyUI();
+//        UpdateTimerUI(timeRemaining);
+//    }
+
+//    private void Update()
+//    {
+//        if (!isTimerRunning)
+//            return;
+
+//        if (timeRemaining > 0)
+//        {
+//            timeRemaining -= Time.deltaTime;
+//            UpdateTimerUI(timeRemaining);
+//        }
+//        else
+//        {
+//            timeRemaining = 0;
+//            isTimerRunning = false;
+//            UpdateTimerUI(0);
+//            GameOverTimeOut();
+//        }
+//    }
+
+//    public void TrySortTrash(TrashType binType, TrashType itemType)
+//    {
+//        totalAttempts++;
+
+//        if (binType == itemType)
+//        {
+//            correctSorts++;
+//            currentScore += pointsPerCorrect;
+//            TrashCollected();
+//        }
+//        else
+//        {
+//            currentScore = Mathf.Max(0, currentScore - pointsPerWrong);
+//            ShowWrongBinFeedback(itemType);
+//        }
+
+//        UpdateScoreUI();
+//        UpdateAccuracyUI();
+//    }
+
+//    public void TrashCollected()
+//    {
+//        collectedTrash++;
+//        UpdateTrashUI();
+
+//        if (AllTrashCollected())
+//        {
+//            isTimerRunning = false;
+
+//            if (cubeRenderer != null)
+//                cubeRenderer.material.color = Color.green;
+
+//            StageComplete();
+//        }
+//    }
+
+//    private void StageComplete()
+//    {
+//        Debug.Log("[TrashManager] Stage Complete!");
+
+//        // Play fireworks
+//        if (fireworksEffect != null)
+//        {
+//            fireworksEffect.Play();
+//        }
+
+//        // Play celebration sound
+//        if (celebrationAudio != null)
+//        {
+//            celebrationAudio.Play();
+//        }
+//    }
+
+//    private void GameOverTimeOut()
+//    {
+//        Debug.Log("[TrashManager] Time's Up!");
+//    }
+
+//    private void UpdateTrashUI()
+//    {
+//        if (trashCountText != null)
+//        {
+//            trashCountText.text = collectedTrash + " / " + totalTrash;
+//        }
+//    }
+
+//    private void UpdateTimerUI(float time)
+//    {
+//        if (timerText == null)
+//            return;
+
+//        int minutes = Mathf.FloorToInt(time / 60);
+//        int seconds = Mathf.FloorToInt(time % 60);
+
+//        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+//    }
+
+//    private void UpdateScoreUI()
+//    {
+//        if (scoreText != null)
+//        {
+//            scoreText.text = currentScore.ToString();
+//        }
+//    }
+
+//    private void UpdateAccuracyUI()
+//    {
+//        if (accuracyText == null)
+//            return;
+
+//        float percentage =
+//            totalAttempts == 0
+//            ? 100f
+//            : (correctSorts / (float)totalAttempts) * 100f;
+
+//        accuracyText.text = Mathf.RoundToInt(percentage) + "%";
+//    }
+
+//    private void ShowWrongBinFeedback(TrashType itemType)
+//    {
+//        if (wrongBinCoroutine != null)
+//            StopCoroutine(wrongBinCoroutine);
+
+//        wrongBinCoroutine = StartCoroutine(ShowFeedbackForDuration());
+//    }
+
+//    private IEnumerator ShowFeedbackForDuration()
+//    {
+//        if (wrongBinPanel != null)
+//            wrongBinPanel.SetActive(true);
+
+//        yield return new WaitForSeconds(wrongBinDisplayDuration);
+
+//        if (wrongBinPanel != null)
+//            wrongBinPanel.SetActive(false);
+//    }
+
+//    public bool AllTrashCollected()
+//    {
+//        return collectedTrash >= totalTrash;
+//    }
+
+//    public int GetScore()
+//    {
+//        return currentScore;
+//    }
+
+//    public float GetAccuracy()
+//    {
+//        return totalAttempts == 0
+//            ? 100f
+//            : (correctSorts / (float)totalAttempts) * 100f;
+//    }
+//}
+
+using System.Collections;
 using UnityEngine;
 using TMPro;
 using System;
@@ -134,6 +355,7 @@ public class TrashManager : MonoBehaviour
         {
             correctSorts++;
             currentScore += pointsPerCorrect;
+            ShowCorrectBinFeedback();
             TrashCollected();
         }
         else
@@ -166,33 +388,11 @@ public class TrashManager : MonoBehaviour
     {
         Debug.Log("[TrashManager] Stage Complete!");
 
-        // 1. Teleportasi pemain ke lokasi spawn yang baharu
-        TeleportPlayerToNewSpawn();
-
-        // 2. Aktifkan Win Panel pada posisi statik asal
-        if (winPanel != null)
-        {
-            winPanel.SetActive(true);
-        }
-
-        // 3. Aktifkan Trofi pada posisi asal yang anda susun di scene
-        if (staticTrophy != null)
-        {
-            staticTrophy.SetActive(true);
-            Debug.Log("[TrashManager] Trofi diaktifkan pada posisi asalnya.");
-        }
-
-        // Mainkan kesan bunga api
         if (fireworksEffect != null)
-        {
             fireworksEffect.Play();
-        }
 
-        // Mainkan bunyi sambutan
         if (celebrationAudio != null)
-        {
             celebrationAudio.Play();
-        }
     }
 
     private void TeleportPlayerToNewSpawn()
@@ -266,12 +466,43 @@ public class TrashManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    private void ShowCorrectBinFeedback()
+    {
+        if (wrongBinCoroutine != null)
+            StopCoroutine(wrongBinCoroutine);
+
+        wrongBinCoroutine = StartCoroutine(ShowFeedbackForDuration("✓ Correct! Well done!", Color.green));
+    }
+
+    private void ShowWrongBinFeedback(TrashType itemType)
+    {
+        if (wrongBinCoroutine != null)
+            StopCoroutine(wrongBinCoroutine);
+
+        wrongBinCoroutine = StartCoroutine(ShowFeedbackForDuration("✗ Wrong bin! Try again!", Color.red));
+    }
+
+    private IEnumerator ShowFeedbackForDuration(string message, Color color)
+    {
+        if (wrongBinPanel != null)
+            wrongBinPanel.SetActive(true);
+
+        if (wrongBinText != null)
+        {
+            wrongBinText.text = message;
+            wrongBinText.color = color;
+        }
+
+        yield return new WaitForSeconds(wrongBinDisplayDuration);
+
+        if (wrongBinPanel != null)
+            wrongBinPanel.SetActive(false);
+    }
+
     private void UpdateTrashUI()
     {
         if (trashCountText != null)
-        {
             trashCountText.text = collectedTrash + " / " + totalTrash;
-        }
     }
 
     private void UpdateTimerUI(float time)
@@ -281,16 +512,13 @@ public class TrashManager : MonoBehaviour
 
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time % 60);
-
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     private void UpdateScoreUI()
     {
         if (scoreText != null)
-        {
             scoreText.text = currentScore.ToString();
-        }
     }
 
     private void UpdateAccuracyUI()
@@ -298,31 +526,11 @@ public class TrashManager : MonoBehaviour
         if (accuracyText == null)
             return;
 
-        float percentage =
-            totalAttempts == 0
+        float percentage = totalAttempts == 0
             ? 100f
             : (correctSorts / (float)totalAttempts) * 100f;
 
         accuracyText.text = Mathf.RoundToInt(percentage) + "%";
-    }
-
-    private void ShowWrongBinFeedback(TrashType itemType)
-    {
-        if (wrongBinCoroutine != null)
-            StopCoroutine(wrongBinCoroutine);
-
-        wrongBinCoroutine = StartCoroutine(ShowFeedbackForDuration());
-    }
-
-    private IEnumerator ShowFeedbackForDuration()
-    {
-        if (wrongBinPanel != null)
-            wrongBinPanel.SetActive(true);
-
-        yield return new WaitForSeconds(wrongBinDisplayDuration);
-
-        if (wrongBinPanel != null)
-            wrongBinPanel.SetActive(false);
     }
 
     public bool AllTrashCollected()
