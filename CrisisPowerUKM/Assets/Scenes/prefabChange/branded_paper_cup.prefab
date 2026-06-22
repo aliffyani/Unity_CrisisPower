@@ -77,6 +77,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: 8d8fb9bafe5019945ba9f8ef8203c38d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 318072608556373468}
+    - targetCorrespondingSourceObject: {fileID: 850830479578353038, guid: 8d8fb9bafe5019945ba9f8ef8203c38d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5358075002551124141}
+    - targetCorrespondingSourceObject: {fileID: -3997116853780009455, guid: 8d8fb9bafe5019945ba9f8ef8203c38d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5672802143454560334}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: 8d8fb9bafe5019945ba9f8ef8203c38d, type: 3}
 --- !u!1 &1568230134402334969 stripped
 GameObject:
@@ -144,3 +150,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashItem
   type: 1
+--- !u!1 &4406345653613727948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 850830479578353038, guid: 8d8fb9bafe5019945ba9f8ef8203c38d, type: 3}
+  m_PrefabInstance: {fileID: 3956621001653771586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5358075002551124141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4406345653613727948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
+--- !u!1 &9110745421623030611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3997116853780009455, guid: 8d8fb9bafe5019945ba9f8ef8203c38d, type: 3}
+  m_PrefabInstance: {fileID: 3956621001653771586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5672802143454560334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9110745421623030611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1

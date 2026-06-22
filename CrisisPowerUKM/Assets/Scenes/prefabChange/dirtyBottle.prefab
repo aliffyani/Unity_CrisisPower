@@ -81,6 +81,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: dbfa6f17b7210034497274130ec09b0a, type: 3}
       insertIndex: -1
       addedObject: {fileID: -4528730910416001505}
+    - targetCorrespondingSourceObject: {fileID: -174565277368469044, guid: dbfa6f17b7210034497274130ec09b0a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7398315338557441979}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: dbfa6f17b7210034497274130ec09b0a, type: 3}
 --- !u!1 &1501294616088829850 stripped
 GameObject:
@@ -148,3 +151,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashItem
   type: 1
+--- !u!1 &5363153394280889325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -174565277368469044, guid: dbfa6f17b7210034497274130ec09b0a, type: 3}
+  m_PrefabInstance: {fileID: 4034783635346244129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7398315338557441979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5363153394280889325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
