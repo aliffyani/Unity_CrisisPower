@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6301286745439468226}
   - component: {fileID: 4650588102280899562}
   - component: {fileID: 2884251001208660017}
+  - component: {fileID: 6607801913046401136}
   m_Layer: 0
   m_Name: Object_4
   m_TagString: Untagged
@@ -90,6 +91,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6607801913046401136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486241992465807667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
 --- !u!1 &559128651240940997
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,6 +806,7 @@ GameObject:
   - component: {fileID: 5658068683626156430}
   - component: {fileID: 1623094738846753631}
   - component: {fileID: 2355414171774930378}
+  - component: {fileID: 1491087530261680413}
   m_Layer: 0
   m_Name: Object_28
   m_TagString: Untagged
@@ -868,6 +886,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1491087530261680413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3818140136862191855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
 --- !u!1 &4804036161401132863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,6 +1099,7 @@ GameObject:
   - component: {fileID: 2927975906111467698}
   - component: {fileID: 7874109207083379189}
   - component: {fileID: 5086522467639387912}
+  - component: {fileID: 2730518516841672620}
   m_Layer: 0
   m_Name: Object_20
   m_TagString: Untagged
@@ -1144,6 +1179,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2730518516841672620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7196605721961828691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
 --- !u!1 &7276450477377685754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1393,7 @@ GameObject:
   - component: {fileID: 3418828919291655688}
   - component: {fileID: 2225715797779159605}
   - component: {fileID: 1634508335985242331}
+  - component: {fileID: 810445933241026307}
   m_Layer: 0
   m_Name: Object_8
   m_TagString: Untagged
@@ -1421,6 +1473,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &810445933241026307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7910606440063064412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
 --- !u!1 &7989473092800391097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,6 +1855,7 @@ GameObject:
   - component: {fileID: 7573586453527633910}
   - component: {fileID: 7461667202261968655}
   - component: {fileID: 7740309804760614070}
+  - component: {fileID: 2442705513687786310}
   m_Layer: 0
   m_Name: Object_16
   m_TagString: Untagged
@@ -1866,6 +1935,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2442705513687786310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8598440729234942543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
 --- !u!1 &8714538251597667536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,6 +1962,7 @@ GameObject:
   - component: {fileID: 1632370772002433943}
   - component: {fileID: 4323343389083932131}
   - component: {fileID: 7961260053794304196}
+  - component: {fileID: 2217011998552221237}
   m_Layer: 0
   m_Name: Object_12
   m_TagString: Untagged
@@ -1956,6 +2042,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2217011998552221237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8714538251597667536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
 --- !u!1 &8887293889923142504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2057,6 +2159,7 @@ GameObject:
   - component: {fileID: 3258218978320418108}
   - component: {fileID: 3054336307953813132}
   - component: {fileID: 2762674548790513475}
+  - component: {fileID: 4631175645545722887}
   m_Layer: 0
   m_Name: Object_24
   m_TagString: Untagged
@@ -2136,6 +2239,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4631175645545722887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009426315397329546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae5c09f54fc79d418316d9e6557776c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHighlight
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pulseSpeed: 2
+  outlineScale: 1.06
+  startHighlighted: 1
 --- !u!1 &9080556634389702003
 GameObject:
   m_ObjectHideFlags: 0
